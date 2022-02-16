@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script defer src="app.js"></script>
+    <title>Hearthstone Card Search</title>
+  </head>
+  <body>
+    <div id="navBar">
+      <ul id="navigators">
+        <li id="all"></li>
+        <li id="faction"></li>
+        <li id="type"></li>
+        <li id="quality"></li>
+        <li id="race"></li>
+        <li id="class"></li>
+      </ul>
+    </div>
+    <div id="main">
+      <h1 id="container">
+        <input type="text" name="cardSearch" />
+        <button id="submit">Search</button>
+      </h1>
+      <div id="showcase">
+        <h3 id="card-one">Leeroy Jenkins</h3>
+        <img
+          src="https://d15f34w2p8l1cc.cloudfront.net/hearthstone/7740c50c88d17b12c3eccbf1c57af9163929add6c63bba7fbad663f574bc6307.png"
+          alt=""
+          id="img"
+        />
+      </div>
+    </div>
+  </body>
+</html>

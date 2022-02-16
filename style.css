@@ -1,0 +1,54 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* Display */
+body {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+h3 {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+
+input {
+    border: 1px solid black;
+    margin: 5px;
+}
+
+button {
+    margin: 5px;
+}
+
+#navBar {
+    display: flex;
+
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+#showcase {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
