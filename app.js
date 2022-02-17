@@ -26,8 +26,11 @@ searchBtn.on("click", () => {
 
 const getCard = (card) => {
   console.log(card);
-  let name = card[0].name;
-  let cardImg = card[0].img;
-  $('img').attr('src', cardImg);
-  $('#card-one').text(name);
+  const img = $('#img')
+  const name = $('#card-one')
+  for(let element in card) {
+    console.log(card[element]);
+    name.text(card[element].name);
+    img.attr('src', card[element].img);
+  }
 };
