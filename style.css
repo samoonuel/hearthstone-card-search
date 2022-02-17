@@ -70,15 +70,6 @@ ul li {
 }
 
 /* POPPER */
-#tooltip {
-  background: #333;
-  color: white;
-  font-weight: bold;
-  padding: 4px 8px;
-  font-size: 13px;
-  border-radius: 4px;
-}
-
 #arrow,
 #arrow::before {
   position: absolute;
@@ -95,6 +86,20 @@ ul li {
   visibility: visible;
   content: "";
   transform: rotate(45deg);
+}
+
+#tooltip {
+  background: #333;
+  color: white;
+  font-weight: bold;
+  padding: 4px 8px;
+  font-size: 13px;
+  border-radius: 4px;
+  display: none;
+}
+
+#tooltip[data-show] {
+    display: block;
 }
 
 #tooltip[data-popper-placement^="top"] > #arrow {

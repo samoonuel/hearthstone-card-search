@@ -1,5 +1,5 @@
 const searchBtn = $("#submit");
-const img = $('#img');
+const img = $("#img");
 let input = "";
 
 const settings = {
@@ -36,8 +36,8 @@ const getCard = (card) => {
   }
 };
 
+// POPPER TOOLTIP
 const tooltip = document.querySelector("#tooltip");
-
 const popperInstance = Popper.createPopper(img, tooltip, {
   modifier: [
     {
@@ -48,3 +48,15 @@ const popperInstance = Popper.createPopper(img, tooltip, {
     },
   ],
 });
+
+const show = () => {
+  tooltip.setAttribute("data-show", "");
+  popperInstance.update();
+};
+
+const hide = () => {
+  tooltip.removeAttribute("data-show");
+};
+
+img.bind('mouseenter focus', show);
+img.bind('mouseleave blur', hide);
