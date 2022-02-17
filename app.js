@@ -1,4 +1,5 @@
-let searchBtn = $("#submit");
+const searchBtn = $("#submit");
+const img = $('#img');
 let input = "";
 
 const settings = {
@@ -26,11 +27,24 @@ searchBtn.on("click", () => {
 
 const getCard = (card) => {
   console.log(card);
-  const img = $('#img')
-  const name = $('#card-one')
-  for(let element in card) {
+  const img = $("#img");
+  const name = $("#card-one");
+  for (let element in card) {
     console.log(card[element]);
     name.text(card[element].name);
-    img.attr('src', card[element].img);
+    img.attr("src", card[element].img);
   }
 };
+
+const tooltip = document.querySelector("#tooltip");
+
+const popperInstance = Popper.createPopper(img, tooltip, {
+  modifier: [
+    {
+      name: "offset",
+      options: {
+        offset: [0, 8],
+      },
+    },
+  ],
+});
